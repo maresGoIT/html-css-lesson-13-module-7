@@ -11,61 +11,37 @@
 
     <title>HTML/CSS Modulul 6 - Lectia 12</title>
     <style>
-      .phone-input label {
-        display: flex;
-        align-items: center;
+      form {
+        padding: 16px;
+        width: 500px;
       }
 
-      .phone-input input,
-      .phone-input select {
-        box-sizing: border-box;
-        padding: 16px 8px;
-        background: transparent;
-        border: none;
+      form:focus-within {
+        border: 5px solid green;
+      }
+
+      form input:focus {
+        border: 5px solid red;
+      }
+
+      input {
         outline: none;
       }
 
-      .phone-input .input-wrapper {
-        margin-left: 16px;
-        background: white;
-        border: 1px solid grey;
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      .phone-input select {
-        background: lightblue;
+      input:focus ~ span {
+        border-color: blue;
       }
     </style>
   </head>
   <body>
     <main class="container example-page">
-      <h1 class="heading-primary sticky">Checkbox cu SVG</h1>
+      <h1 class="heading-primary sticky">Proprietatea focus:within</h1>
       <section class="lesson-example mt-lg">
-        <form class="form mt-lg" name="Test">
-          <h2>Phone Input</h2>
-          <div class="phone-input">
-            <label>
-              <span class="label-text">Numar de telefon</span>
-              <div class="input-wrapper">
-                <select class="country-code-input" name="phone-country">
-                  <option selected value="romania">+4</option>
-                  <option value="albania">+008</option>
-                </select>
-                <input
-                  class="number-input"
-                  type="text"
-                  pattern="[0-9]{10}"
-                  name="phone-number"
-                  title="Numarul de telefon nu este valid"
-                  required
-                />
-              </div>
-            </label>
-          </div>
-          <div class="form-controls">
-            <button class="btn-submit" type="submit">Trimite</button>
-          </div>
+        <form>
+          <label>
+            Nume: <input name="firstName" type="text" />
+            <span>Test</span>
+          </label>
         </form>
       </section>
     </main>
