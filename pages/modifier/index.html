@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/fonts.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/forms.css" />
+
+    <title>HTML/CSS Modulul 7 - Lectia 13</title>
+    <style>
+      .form {
+        padding: 15px;
+        background: lightblue;
+      }
+
+      .form--large {
+        width: 600px;
+      }
+
+      .form--small {
+        width: 200px;
+      }
+
+      .form__label {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .form__label + .form__label {
+        margin-top: 16px;
+      }
+
+      .form__controls {
+        margin-top: 16px;
+      }
+
+      .form__label-text {
+        text-transform: capitalize;
+      }
+
+      .form__input {
+        padding: 4px 8px;
+        outline: none;
+        border: 1px solid royalblue;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container example-page">
+      <article>
+        <h1 class="heading-primary sticky">
+          BE<span class="strong">M</span> - Modifier
+        </h1>
+        <p>
+          O "entitate" care defineste aspectul, starea sau comportamentului unui
+          element al unui block.
+        </p>
+        <p>
+          Numele "modifier"-ului descrie aspectul (Ce dimensiune?, de ex.
+          --small), starea (Prin ce difera?, de ex. --is-active, --is-disabled)
+        </p>
+
+        <p>
+          Denumirea unui modifier este formata prin
+          <em>nume-block__nume-elemente--nume-modifier</em>
+        </p>
+      </article>
+      <section class="lesson-example mt-lg">
+        <form class="form form--large">
+          <label class="form__label">
+            <span class="form__label-text">Nume</span>
+            <input class="form__input" type="text" name="Nume" />
+          </label>
+          <div class="form__controls">
+            <button type="submit" class="form__button form__button--red">
+              Trimite
+            </button>
+            <button type="reset">Reseteaza</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

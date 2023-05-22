@@ -218,3 +218,7 @@ a:focus {
   color: white;
   background: #182e6d;
 }
+
+.strong {
+  font-weight: bold;
+}
